@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Ubuntu:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /* font-family: 'Montserrat', sans-serif;
+    font-family: 'Ubuntu', sans-serif; */
+}
+
+header{
+    background-color: blueviolet;
+}
+
+nav ul{
+    padding: .6rem 3rem;
+}
+nav ul li{
+    list-style: none;
+    font-size: 3.2vw;
+    color: #0d0808;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.gameBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 3rem;
+    font-family: 'Ubuntu', sans-serif;
+    position: relative;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+}
+
+.line{
+    width: 0;
+    height: 4px;
+    background-color: brown;
+    position: absolute;
+    transition: width .6s ease-in-out;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.box:hover{
+    background-color: rgb(222, 237, 250);
+}
+
+.gameText{
+    font-size: 7vw;
+    font-weight: 500;
+}
+
+.gameInfo{
+    padding: 1rem 2rem;
+    margin: 2rem 3rem;
+
+}
+
+.gameInfo h1{
+    font-size: 3vw;
+}
+
+/* .infoBox{
+
+} */
+
+.info{
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    display: block;
+    color: rgb(140, 22, 22);
+    font-weight: 700;
+}
+
+#reset{
+    padding: .4rem 1.4rem;
+    margin: 1rem 0;
+    display: block;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    background-color: crimson;
+    border: 2px solid black;
+    border-radius: 4px;
+
+}
+
+.imgBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgBox img{
+    width: 0;
+    
+    transition: all 1s ease-in-out;
+}
+
+
+.br-0{
+    border-right: 0;
+}
+
+.bl-0{
+    border-left: 0;
+}
+
+.bt-0{
+    border-top: 0;
+}
+
+.bb-0{
+    border-bottom: 0;
+}
+
+
+@media screen and (max-width: 800px)
+{  
+    .gameBox{
+        flex-wrap: wrap;
+    }
+
+    #reset{
+        font-size: 1.2rem;
+    }
+    
+
+    .gameInfo h1{
+        font-size: 1.4rem;
+    }
+
+    .info{
+        font-size: 1.4rem;
+    }
+    
+}
+
+
+
+@media screen and (max-width:600px)
+{
+    .gameBox{
+        flex-wrap: wrap;
+    }
+
+    .gameInfo h1{
+        font-size: 1.3rem;
+        text-align: justify;
+    }
+
+    .info{
+        font-size: 1.2rem;
+    }
+
+    #reset{
+        font-size: 1.2rem;
+    }
+}
